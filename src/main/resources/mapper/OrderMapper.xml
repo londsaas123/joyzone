@@ -9,7 +9,7 @@
     <result column="team_id" property="teamId" jdbcType="BIGINT" />
     <result column="order_type" property="orderType" jdbcType="INTEGER" />
     <result column="order_no" property="orderNo" jdbcType="VARCHAR" />
-    <result column="shop_type_id" property="shopTypeName" jdbcType="INTEGER" />
+    <result column="shop_type_id" property="shopTypeId" jdbcType="BIGINT" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="shop_id" property="shopId" jdbcType="BIGINT" />
     <result column="price" property="price" jdbcType="DECIMAL" />
