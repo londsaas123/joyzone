@@ -113,9 +113,10 @@ public class AppLoginApiController {
     @ApiOperation(value = "用户注册或登录 @zhangyu")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "phone", value = "用户手机号", required = true, dataType = "String", paramType = "query"),
-            @ApiImplicitParam(name = "mobileCode", value = "验证码", required = true, dataType = "String", paramType = "query")
+            @ApiImplicitParam(name = "mobileCode", value = "验证码", required = true, dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "playNum", value = "推荐码", required = false, dataType = "String", paramType = "query")
     })
-    public R userRegister(@RequestParam("phone") String phone,@RequestParam("mobileCode") String mobileCode) {
+    public R userRegister(@RequestParam("phone") String phone,@RequestParam("mobileCode") String mobileCode,String playNum) {
         Map map = new HashMap();
         if (StringUtil.isEmpty(phone) || StringUtil.isEmpty(mobileCode)) {
             return R.error("参数有误！");
